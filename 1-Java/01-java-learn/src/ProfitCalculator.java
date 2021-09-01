@@ -7,7 +7,7 @@ public class ProfitCalculator {
 	    int profit=sellingprice-buyingprice;
 	    
 		
-			System.out.println("profit :" + profit);
+		System.out.println("profit :" + profit);
 		}
 }
 		// TODO Auto-generated method stub
