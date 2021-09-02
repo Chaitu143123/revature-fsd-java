@@ -10,7 +10,6 @@ public class ProfitCalculator {
 		System.out.println("profit :" + profit);
 		}
 }
-		// TODO Auto-generated method stub
 
 	
 

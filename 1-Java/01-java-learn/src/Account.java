@@ -9,6 +9,29 @@ public class Account {
 		this.Balance = balance;
 		this.transacations = transacations;
 	}
+	public void printStatement() {
+		System.out.println("accountNumber= " + accountNumber);
+		System.out.println("initialBalance = " + Balance );
+		System.out.println("\n------------------------");
+		System.out.println("Type Transaction Balance");
+		System.out.println("--------------------------");
+		for(Transacation transacation:transacations) {
+			if(transacation.getType() == 'D') {
+				Balance += transacation.getAmount();
+
+				}
+			if(transacation.getType() == 'W') {
+				Balance -= transacation.getAmount();
+				}
+			
+
+			transacation.displayTransaction(Balance);
+			
+		}
+		}
+	
+		
+	
 	public static void main(String[] args) {
 		Transacation transaction1=new Transacation('W',2000.0);
 		Transacation transaction2=new Transacation('D',20000.0);
@@ -18,6 +41,7 @@ public class Account {
 		Transacation[] transacationList= {transaction1,transaction2,transaction3,transaction4,transaction5};
 		
 		Account account= new Account("0130234374",5000.0,transacationList);
+		account.printStatement();
 	}
 
 
