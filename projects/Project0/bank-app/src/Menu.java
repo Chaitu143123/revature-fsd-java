@@ -19,7 +19,6 @@ public class Menu {
 		switch (option) {
         case 1: Scanner scanner = new Scanner(System.in);
                 System.out.println("Enter the account number:");
-                int ac = scanner.nextInt();
                 System.out.println("Enter the Password:");
                 int pw = scanner.nextInt();
                 if(ac == ac_number && pw == ac_pass)
