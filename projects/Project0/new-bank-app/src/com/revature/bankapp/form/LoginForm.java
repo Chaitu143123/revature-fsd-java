@@ -7,19 +7,14 @@ import com.revature.bankapp.model.DataManager;
 import com.revature.bankapp.model.Model;
 
 public class LoginForm extends Form{
+	private static Object success;
 	private String email;
 	private String password;
-	
-	
-
-	
-
-	public LoginForm(String name, boolean success) {
-		super(name, success);
+	public LoginForm(String name) {
+		super(name, name, name, name, success,success,success,success);
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
 	public void captureData() {
 		Scanner scanner = new Scanner(System.in);
 
@@ -41,13 +36,9 @@ public class LoginForm extends Form{
         }
         else if(customer.getPassword().equals(customer.getPassword())){
         	success=true;
-	        System.out.println("login successful :");
+	        System.out.println("LOGIN SUCCESSFULL !!");
 	        CustomerMenu menu=new CustomerMenu("CUSTOMER MENU");
 	        menu.displayMenuAndcaptureSelection();
-	        
-	        
-	        System.out.println("wellcome :" + customer.getFirstname());
-
         	
         }else {
 	        System.out.println("invalid ");
@@ -56,5 +47,25 @@ public class LoginForm extends Form{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	protected void actionAccount() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void captureAccount1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void displayDepoist() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 
 }

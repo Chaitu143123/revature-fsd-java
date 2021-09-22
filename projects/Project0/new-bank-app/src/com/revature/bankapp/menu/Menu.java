@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import com.revature.bankapp.model.AccountManager;
+import com.revature.bankapp.model.CreateAccout;
+
 public abstract class Menu {
 	protected String name;
 	protected List<String> menuItems;
@@ -16,9 +19,9 @@ public abstract class Menu {
 		menuItems.add(menuItemName);
 	}
 	public void displayMenu() {
-		System.out.println("++++");
+		System.out.println("=====");
 		System.out.println("MENU");
-		System.out.println("++++");
+		System.out.println("=====");
 		for(int i = 0;i< menuItems.size();i++) {
 			System.out.println((i+1) + ")" +menuItems.get(i));
 
@@ -32,16 +35,23 @@ public abstract class Menu {
 	public void captureSelection() {
 		Scanner sc=new Scanner(System.in);
 	    selection =Integer.parseInt(sc.nextLine());
-	    handleAction();
 	}
 	public void displayMenuAndcaptureSelection() {
 		displayMenu();
 		captureSelection();
 	    handleAction();
+	    
 
 		
 		
 	}
+	
+		
+		
+		
+
+
+	
 	abstract void handleAction(); 
 		
 	

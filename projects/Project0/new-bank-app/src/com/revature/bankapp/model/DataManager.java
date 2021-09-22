@@ -11,6 +11,7 @@ public class DataManager {
 		customerList.add(new Model("john","smith","john","123") );
 		
 	}
+	
 	public static void addCustomer(Model customer) {
 		customerList.add(customer);
 		
@@ -24,5 +25,6 @@ public class DataManager {
 		}
 		return null;
 	}
+	
 
 }

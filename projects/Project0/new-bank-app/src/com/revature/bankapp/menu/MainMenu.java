@@ -20,11 +20,10 @@ public class MainMenu extends Menu {
 	@Override
 	void handleAction() {
 		Scanner scanner = new Scanner(System.in);
-
 		switch(selection) {
 		case 1:
-	        System.out.println("=========");
-	        System.out.println("REGISTER NEW CUSTOMER");
+			System.out.println("=========");
+	        System.out.println("REGISTER CUSTOMER");
 	        System.out.println("===========");
 
 	        System.out.println("Enter first name :");
@@ -38,16 +37,18 @@ public class MainMenu extends Menu {
 	        DataManager.addCustomer(new Model(firstname,lastname,email,password));
 	        System.out.println("customer added successfully");
 		case 2:
-			LoginForm loginform=new LoginForm("Login Form", false);
+			LoginForm loginform=new LoginForm("Login Form");
 			loginform.captureDataAndPerformAction();
 			break;
 	        	
 
 	        }
 
-		}
+		
 
 		
 	}
+}
+
 
 
